@@ -2,7 +2,7 @@ name: Hello
 on: push #MEMO: []を使うことで複数イベント指定できる
 jobs:
   hello:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest ## windowsよりUbuntuを使うと、プライベートリポジトリの有料枠でも節約できる
     steps:
       - run: echo "Hello world!"
       - uses: actions/checkout@v4
