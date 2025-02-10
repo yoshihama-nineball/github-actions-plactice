@@ -5,3 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{ github.actor }}" # githubコンテキストの参照
+      - run: echo "ワークフローの実行ID:${{ github.run_id }}"
+      - run: echo "プルリクのソースブランチ:${{ github.head_ref }}"
+      - run: echo "ステップのワーキングディレクトリ:${{ github.workspace }}"
+      - run: echo "リポジトリ名:${{ github.repository }}"
+      - run: echo "リポジトリのオーナー名:${{ github.repository_owner }}"
+      - run: echo "トリガーになったイベント:${{ github.event }}"
