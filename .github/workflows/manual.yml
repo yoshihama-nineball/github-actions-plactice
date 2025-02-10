@@ -7,8 +7,14 @@ on:
         default: Hello                     # 入力パラメータのデフォルト値
         required: true                     # 入力パラメータの必須フラグ
         description: A cheerful word       # 入力パラメータの概要
+      fruit:
+        type: choice
+        options: [orange, cherry, apple]
+        required: true
+        description: 果物を選んでね
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{ inputs.greeting }}" # 入力パラメータ「greeting」の参照
+      - run: echo "${{ inputs.fruit }}" # 入力パラメータ「greeting」の参照
