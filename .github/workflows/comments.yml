@@ -8,6 +8,6 @@ jobs:
       contents: read       # ソースコードの読み込みを許可
     steps:
       - uses: actions/checkout@v4
-      - run: gh pr comment "${GITHUB_HEAD_REF}" --body "Hello, ${GITHUB_ACTOR}"
+      - run: gh pr comment "${GITHUB_HEAD_REF}" --body "Hello, ${GITHUB_ACTOR}" # プルリクエストすると、自動でコメントを返信する
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub CLI用クレデンシャル
